@@ -39,7 +39,7 @@ cd src
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 1
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 2
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 3
-python find_find_best_epochs.py
+python find_best_epochs.py
 
 python v1.2_full_train.py --lr 3e-5 --model_name openai/whisper-base.en
 python v1.2_aug_full.py --model_name openai/whisper-large-v3 --warm 0.2 --batch_size 4 --accum 32
