@@ -1,6 +1,3 @@
-"""This is an example submission that uses a pretrained model to generate transcriptions.
-Note: for this submission to work, you must download the whisper model to the assets/ dir first."""
-
 import string
 from pathlib import Path
 
