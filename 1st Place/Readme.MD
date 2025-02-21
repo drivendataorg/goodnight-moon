@@ -14,6 +14,8 @@ have the following files.
 project_root/
 ├── inputs (data folder)
 │   ├── train
+│       ├── train_metadata.csv
+│       ├── train_labels.csv
 │       └── ***.wav
 │   └── test 
 │       ├── test_metadata.csv
@@ -33,9 +35,10 @@ please run this code at single card with more than 48G vram.
 
 ## 3. Train
 * please run `train.sh`, 
-* or train separately five models
+* or train separately six models
 ```shell
 cd src
+python make_fold.py
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 1
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 2
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 3

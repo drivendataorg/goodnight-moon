@@ -1,5 +1,6 @@
 #! /bin/bash
 cd src
+python make_fold.py
 # first find the best epoch, default should be 2 epochs
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 1
 python v1.2.py --lr 3e-5 --model_name openai/whisper-base.en --epochs 2
