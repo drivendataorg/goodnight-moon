@@ -1,0 +1,10 @@
+torchaudio==2.4.0
+numpy==1.26.4
+pandas==2.2.2
+joblib==1.4.2
+scipy==1.14.1
+scikit-learn
+tokenizers==0.19.1
+transformers==4.44.2
+assets/MeloTTS
+pyworld==0.3.4
