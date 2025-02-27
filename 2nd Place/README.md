@@ -13,7 +13,33 @@ How to install Python: https://docs.python.org/3/using/unix.html#on-linux
 How to install Pytroch: https://pytorch.org/get-started/previous-versions/  
 
 2. Install the required Python packages:
+
 `pip install -r requirements.txt`
+
+3. Clone and install the MeloTTS repository
+
+Clone the MeloTTS repository so this can be included in the submission assets.
+```
+mkdir assets
+git clone https://github.com/myshell-ai/MeloTTS.git assets/MeloTTS
+pip install assets/MeloTTS
+python -m unidic download
+python -c "from melo.api import TTS; TTS(language='EN_NEWEST')"
+```
+
+Move downloaded files into the `assets` directory.
+```
+mv ~/nltk_data/corpora/ assets/corpora/
+mv ~/nltk_data/taggers/ assets/taggers
+```
+
+4. Download TTS model assets
+
+```
+mkdir assets/tts_model
+curl -L -o assets/tts_model/checkpoint.pth "https://huggingface.co/myshell-ai/MeloTTS-English-v3/resolve/main/checkpoint.pth?download=true"
+curl -L -o assets/tts_model/config.json "https://huggingface.co/myshell-ai/MeloTTS-English-v3/resolve/main/config.json?download=true"
+```
 
 # Run data preprocessing
 First, move the training dataset to the "data/" folder, that is, the path of "train_metadata.csv" in the dataset should be "data/train_metadata.csv". 

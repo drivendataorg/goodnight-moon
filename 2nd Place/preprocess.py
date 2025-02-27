@@ -1,14 +1,18 @@
-import os
-os.system('mkdir tts_data')
+from pathlib import Path
 
 import nltk
 nltk.data.path.append('./assets')
 
+from huggingface_hub import hf_hub_download
 from melo.api import TTS
 import pandas as pd
 from tqdm import tqdm
 import numpy as np
 import torch
+
+Path("tts_data").mkdir(exist_ok=True)
+
+nltk.download('averaged_perceptron_tagger_eng')
 
 device = f"cuda"
 model = TTS(language='EN_NEWEST', device=device, 
