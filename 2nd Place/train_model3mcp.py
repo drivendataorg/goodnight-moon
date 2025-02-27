@@ -20,7 +20,7 @@ class CFG:
     scheduler='cosine' # ['linear', 'cosine']
     data_path = 'data/train_metadata.csv'
     label_path = 'data/train_labels.csv'
-    audio_folder = 'data/train_audio/'
+    audio_folder = 'data/'
     label_audio_folder = 'tts_data/'
     refer_pred_folder = 'refer_preds/'
     model_save_name = 'model3mcp'
