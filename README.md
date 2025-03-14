@@ -1,7 +1,7 @@
 [<img src='https://s3.amazonaws.com/drivendata-public-assets/logo-white-blue.png' width='600'>](https://www.drivendata.org/)
 <br><br>
 
-[<img src='https://s3.amazonaws.com/drivendata-public-assets/mit-RER-banner-image.jpg'>](https://www.drivendata.org/competitions/298/literacy-screening/)
+[<img src='https://s3.amazonaws.com/drivendata-public-assets/mit-RER-banner-image.jpg' width='600'>](https://www.drivendata.org/competitions/298/literacy-screening/)
 
 # Goodnight Moon, Hello Early Literacy Screening
 
@@ -23,7 +23,7 @@ This repository contains code from winning competitors in the [Goodnight Moon, H
 
 Place | Team or User | Public Score | Private Score | Summary of Model | Explainability Bonus
 --- | --- | ---   | ---   | ---  | --- 
-1   | [sheep](https://www.drivendata.org/users/sheep/) | 0.2011 | 0.2042 | Fine-tuned OpenAI’s Whisper model with a custom loss function. For each word in expected_text, its token was inputted into the decoder and the binary cross-entropy (BCE) loss between the token’s logit and its corresponding score was computed. | [1st Place](https://github.com/drivendataorg/goodnight-moon/blob/main/1st%20Place/explainability_bonus/Explainability%20and%20Localization%20Write%20Up.pdf)
+1   | [sheep](https://www.drivendata.org/users/sheep/) | 0.2011 | 0.2042 | Fine-tuned OpenAI’s Whisper model with a custom loss function. For each word in `expected_text`, its token was inputted into the decoder and the binary cross-entropy (BCE) loss between the token’s logit and its corresponding score was computed. | [1st Place](https://github.com/drivendataorg/goodnight-moon/blob/main/1st%20Place/explainability_bonus/Explainability%20and%20Localization%20Write%20Up.pdf)
 2   | [dylanliu](https://www.drivendata.org/users/dylanliu/) | 0.2088 | 0.2098 | Combined various multimodal classification models, including Whisper-medium (only the encoder part) as the speech feature extraction model and bge-large as the text feature extraction model, as well as a text-to-speech model. Used a cv-based weight searching script to automatically search for weights. | [2nd Place](https://github.com/drivendataorg/goodnight-moon/blob/main/2nd%20Place/explainability_bonus/Bonus%20Round%20Write-up.pdf)
 3   | [vecxoz](https://www.drivendata.org/users/vecxoz/) | 0.2156 | 0.2137 | Used 4 modalities of the data: original audio, audio generated from expected text (by SpeechT5), original expected text, and text transcribed from original audio (by Whisper finetuned on positive examples). Built a multimodal classifier which used the encoder from the finetuned Whisper model as audio feature extractor and Deberta-v3 as text feature extractor. | 
 
